@@ -19,6 +19,8 @@
   </a>
 
   <h3 align="center">Instagram Clone</h3>
+  <h4 align="center">(<a href="#top">❗Danger message... explained❗</a>)</h4>
+
 
   <p align="center">
     An awesome Instagram clone built with Ruby on Rails.
@@ -141,7 +143,7 @@ This is an example of how to list things you need to use the software and how to
 
 First, if you are using Google Chrome, it may display a warning about insecure content. This is normal. This is because the project is hosted on Heroku, and using thir party libraries. Simply skip the message by followith this video. 
 
-<p align="left">
+<p align="left" id="danger">
 <img src="https://user-images.githubusercontent.com/69011963/164516377-3c570bf7-6091-4d90-9031-98082d0e83cb.gif" alt="Logo" width="29%" height="auto" object-fit="cover">
 
 <img src="https://user-images.githubusercontent.com/69011963/164518637-7e58cc46-6ca8-4dc1-9d5f-450904a30e4b.gif" alt="Logo" width="70%" height="auto" object-fit="cover">
