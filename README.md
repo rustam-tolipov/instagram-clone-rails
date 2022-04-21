@@ -74,6 +74,8 @@ It is one of my most proud projects. I am proud to say that I have built this pr
 
 Here's why:
 * Front designe is build with HTML and CSS technologies.
+* User friendly
+* Available on Desktop, Tablet, and Phones
 * Cloudinary is used to upload images to the server.
 * Backend is built with Ruby on Rails.
 
