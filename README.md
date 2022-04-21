@@ -28,7 +28,7 @@
     <a href="https://instagram-test-ror.herokuapp.com/"><strong>Explore the website »</strong></a>
     <br />
     <br />
-    <a href="https://instagram-test-ror.herokuapp.com/">View Demo</a>
+    <a href="https://instagram-test-ror.herokuapp.com/">LIVE DEMO</a>
     ·
     <a href="https://github.com/Rustamxon7/Instagram-Clone-Rails/issues">Report Bug</a>
     ·
@@ -63,6 +63,8 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+
+### Live Demo :    <a href="https://instagram-test-ror.herokuapp.com/">LIVE DEMO</a>
 
 
 
