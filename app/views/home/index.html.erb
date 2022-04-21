@@ -1,0 +1,8 @@
+<h1>Welcome to the Instagram clone!</h1>
+<!-- rediret to sign up if there are no users -->
+<% if @users.empty? %>
+  <%= link_to 'Sign up', new_user_session_path %>
+<% else %>
+  <h1>User already signed in!</h1>
+  <%= link_to 'Sign in', new_user_session_path %>
+<% end %>

@@ -1,0 +1,27 @@
+<div class="login-container">
+  <div class="box">
+    <div class="heading"></div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="field"><%= f.text_field :name, placeholder: "Username", class: 'box-input', required: true %> <%= f.label :name, class: 'box-label' %></div>
+    <div class="field"><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Phone number, username, or email", class: 'box-input', required: true %> <%= f.label :email, class: 'box-label' %></div>
+
+    <div class="field"><%= f.password_field :password, autocomplete: "new-password", placeholder: "New password", class: 'box-input', required: true %> <%= f.label :password, class: 'box-label'%></div>
+
+    <div class="field"><%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password", class: 'box-input', required: true %> <%= f.label :password_confirmation, class: 'box-label' %><br /></div>
+
+    <%= f.button "Sign up", class: 'login-button', title: 'sign up' %>
+
+    <div class="separator">
+      <div class="line"></div>
+      <p>OR</p>
+      <div class="line"></div>
+    </div>
+    <div class="other">
+      <button class="fb-login-btn" type="button">
+        <i class="fa fa-facebook-official fb-icon"></i>
+        <span class=""><%= render "devise/shared/links", class: 'signup' %></span>
+      </button>
+    </div>
+    <% end %>
+  </div>
+</div>

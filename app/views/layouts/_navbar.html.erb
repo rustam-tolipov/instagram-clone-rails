@@ -1,0 +1,59 @@
+<header class="header">
+  <div class="header-container">
+    <!-- LOGO -->
+    <%= link_to root_path do %> <%= image_tag 'img/nav-logo.png', alt: 'Instagram logo', class: 'logo'%> <% end %>
+    <div class="navigation">
+      <!-- SEARCHBAR -->
+      <form class="searchbar">
+        <!-- LOGO -->
+        <label> <ion-icon class="search-icon" name="search-outline"></ion-icon> </label>
+        <input class="search-input" placeholder="Search" />
+      </form>
+      <!-- NAVBAR -->
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-link">
+            <% if current_user %> <%= link_to root_path, class: 'nav-link' do %> <ion-icon name="home-outline"></ion-icon>
+            <% end %> <% end %>
+          </li>
+          <li class="main-nav-link">
+            <ion-icon name="paper-plane-outline"></ion-icon>
+          </li>
+          <li class="main-nav-link">
+            <!-- link to posts/new -->
+            <% if current_user %> <%= link_to new_post_path, class: 'nav-link' do %> <ion-icon name="add-outline" class="add-nav-btn"></ion-icon> <% end %> <% end %>
+            <!-- <ion-icon name="add-outline" class="add-nav-btn"></ion-icon> -->
+          </li>
+          <li class="main-nav-link">
+            <ion-icon name="compass-outline"></ion-icon>
+          </li>
+          <li class="main-nav-link">
+            <ion-icon name="heart-outline"></ion-icon>
+          </li>
+          <li class="main-nav-link">
+            <%= link_to user_path(current_user), class: 'profile-img' do %> 
+            <% if current_user %>
+             <%= image_tag avatar_url(current_user), class: 'profile-img' %> <% else %>
+            <ion-icon name="person-circle-outline" class="profile-img"></ion-icon>
+            <% end %> <% end %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="header--mobile__container">
+    <% if current_user %> <%= link_to new_post_path, class: 'nav-link' do %> <ion-icon name="add-outline" class="add-nav-btn"></ion-icon> <% end %> <% end %> <%= link_to root_path do %> <%= image_tag 'img/nav-logo.png', alt: 'Instagram logo', class: 'logo'%> <% end %>
+    <ion-icon name="person-add-outline" class="add-person-nav-btn"></ion-icon>
+  </div>
+</header>
+
+<nav class="mobile--navbar">
+  <%= link_to root_path, class: 'mobile--nav__icon' do %>
+  <ion-icon class="mobile--nav__icon" name="home"></ion-icon>
+  <% end %>
+  <ion-icon class="mobile--nav__icon" name="search-outline"></ion-icon>
+  <% if current_user %> <%= link_to new_post_path, class: 'nav-link' do %> <ion-icon name="add-outline" class="add-nav-btn"></ion-icon> <% end %> <% end %> <%= link_to user_path(current_user), class: 'profile-img' do %> <% if current_user %> <%= image_tag avatar_url(current_user), class: 'profile-img' %> <% else %>
+  <ion-icon name="person-circle-outline" class="profile-img"></ion-icon>
+  <% end %> <% end %>
+</nav>

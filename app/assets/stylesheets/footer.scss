@@ -1,0 +1,23 @@
+.footer {
+  color: #747474;
+  font-size: 1.2rem;
+  background-color: #fafafa;
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #747474;
+}

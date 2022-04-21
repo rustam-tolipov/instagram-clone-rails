@@ -1,0 +1,316 @@
+/* MAIN */
+
+.main {
+  background-color: #fafafa;
+  padding-top: 2.4rem;
+  padding-bottom: 9rem;
+}
+
+.main-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 66%;
+}
+
+.container {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.stories-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  border: #c7c7c7 solid 0.1px;
+  padding: 2.2rem 2.4rem 1.2rem 2.2rem;
+}
+
+.stories-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.story-profile-img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  outline: #d82c7c solid 2px;
+  padding: 2px;
+  object-fit: cover;
+}
+
+.side-bar {
+  width: 32%;
+}
+
+.user__img {
+  height: 5.4rem;
+  width: 5.4rem;
+  border-radius: 50%;
+  border: #8f8f8f solid 1px;
+  object-fit: cover;
+}
+
+.user__profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3.2rem;
+  letter-spacing: 0.4px;
+}
+
+.user__info {
+  margin-right: auto;
+  color: #262626;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 1.6rem;
+}
+
+.user__name {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.user__fullname {
+  font-size: 1.3rem;
+  color: #8f8f8f;
+  font-weight: 400;
+}
+
+.switch:link,
+.switch:visited {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #3296f6;
+  font-weight: 500;
+}
+
+.suggestions {
+  padding-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.suggestion__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #8f8f8f;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.2rem;
+}
+
+.see__all:link,
+.see__all:visited {
+  color: #262626;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.sugessted__profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  letter-spacing: 0.4px;
+}
+
+.sugessted__profile--img {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.suggested__user__fullname {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #8f8f8f;
+}
+
+.footer {
+  width: 100%;
+  padding-top: 3.2rem;
+  padding-bottom: 2.4rem;
+}
+
+.footer__list {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.footer__list span {
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  color: #c7c7c7;
+}
+
+.footer__link a:link,
+.footer__link a:visited {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #c7c7c7;
+}
+
+.copyright {
+  color: #c7c7c7;
+  font-size: 1.2rem;
+  padding-top: 1.6rem;
+}
+
+/* POSTS */
+
+.post {
+  width: 100%;
+  display: grid;
+  flex-direction: column;
+  grid-template-rows: 6.2rem 1fr 5.4rem 9.8rem 5.4rem;
+  border: #c7c7c7 solid 0.1px;
+}
+
+.post-top-bar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem;
+}
+
+.post__profile--info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.post__profile--img {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  outline: #d82c7c solid 2px;
+  padding: 2px;
+  object-fit: cover;
+}
+
+.post__profile--name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.profile--name {
+  font-size: 1.4rem;
+}
+
+.profile--info {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.post__profile--options {
+  font-size: 1.8rem;
+}
+
+.post--img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.post__bottom--bar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6rem;
+}
+
+.post__icons,
+.dots,
+.post__icon--save {
+  font-size: 2.2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.dots {
+  margin-right: 5.4rem;
+}
+
+.post--info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.6rem;
+  gap: 1rem;
+  background-color: #fff;
+}
+
+.post__likes--count {
+  font-size: 1.4rem;
+  padding-bottom: 0.2rem;
+  color: #262626;
+}
+
+.post__full--info {
+  font-size: 1.4rem;
+  color: #262626;
+}
+
+.tag {
+  color: #3296f6;
+}
+
+.more {
+  color: #7d7d7d;
+}
+
+.post__view--comments {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #7d7d7d;
+}
+
+.post__posted--time {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #7d7d7d;
+}
+
+.post__comments {
+  border-top: #c7c7c7 solid 0.1px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6rem;
+}
+
+.comment__icon {
+  font-size: 2.4rem;
+  color: #262626;
+}
+
+.post__comment--input {
+  border: none;
+  padding: 1rem;
+  width: 90%;
+}
+
+.comment__submit {
+  border: none;
+  background-color: #fff;
+  color: #70b6f9;
+  font-size: 1.4rem;
+}

@@ -1,0 +1,142 @@
+.header {
+  border-bottom: #c7c7c7 solid 0.1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  padding-top: 1.2rem;
+  padding-bottom: 0.8rem;
+  max-width: 98rem;
+  margin: 0 auto;
+  gap: 18rem;
+}
+
+.logo {
+  height: auto;
+  width: 11rem;
+}
+
+.searchbar {
+  background-color: #efefef;
+  width: 26rem;
+  border-radius: 0.8rem;
+  display: flex;
+  padding-top: 0.1rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1.6rem;
+  margin-left: 2.2rem;
+  margin-right: 3.2rem;
+  gap: 0.2rem;
+}
+
+.search-icon {
+  font-size: 1.8rem;
+  color: #8f8f8f;
+}
+
+.search-input {
+  background-color: #efefef;
+  border: none;
+  padding: 1rem;
+  width: 90%;
+}
+
+::placeholder {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #8f8f8f;
+}
+
+.navigation {
+  display: flex;
+  gap: 4rem;
+  padding-left: 2rem;
+}
+
+.main-nav-list {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  color: #262626;
+  padding-top: 0.4rem;
+}
+
+.main-nav-link {
+  font-size: 2.4rem;
+}
+
+.add-nav-btn {
+  border: #262626 solid 1.5px;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+
+.profile-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.stories-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.story-profile-name {
+  font-size: 1.2rem;
+}
+
+// .nav {
+//   background-color: #ffffff;
+//   border-bottom: 1px solid #dbdbdb;
+//   display: flex;
+//   align-items: center;
+//   height: 6rem;
+// }
+
+// .nav-container {
+//   width: 97.5rem;
+//   margin: 0 auto;
+//   padding: 0 2rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .logo img {
+//   height: 4rem;
+// }
+
+// .nav-input {
+//   font-size: 1.4rem;
+//   background-color: #fafafa;
+//   width: 26.8rem;
+//   padding: 0.9rem 1.2rem;
+//   border: 1px solid #dbdbdb;
+//   border-radius: 0.3rem;
+// }
+// .nav-input:focus {
+//   outline: none;
+// }
+
+// .nav-icons {
+//   display: flex;
+//   align-items: center;
+//   gap: 2.4rem;
+// }
+
+// ion-icon {
+//   font-size: 2.6rem;
+//   cursor: pointer;
+// }

@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="edit">
+    <div class="options">
+      <div class="option"><%= link_to 'Edit Profile', edit_user_registration_path %></div>
+      <div class="option"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></div>
+    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :class => "edit-field form" }) do |f| %> <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-container">
+      <div class="form-grid mobile--edit__title">
+        <%= image_tag avatar_url(@user), class: 'edit-avatar' %>
+        <div class="edit-profile__bottom">
+          <h3><%= @user.username %></h3>
+          <p class="change-profile-image">
+            <%= f.file_field :image %>
+          </p>
+        </div>
+      </div>
+        </br>
+      <p class="edit-description">
+       You can change avatar image temporarily but not for long time.</p>
+      <div class="edit-name form-grid">
+        <%= f.label :name %>
+        <div class="edit-name__input">
+          <%= f.text_field :name, autofocus: true %>
+          <p class="edit-description">Help people discover your account by using the name you're known by: either your full name, nickname, or business name. You can only change your name twice within 14 days.</p>
+        </div>
+      </div>
+      <div class="edit-username form-grid">
+        <label for="username">Username</label>
+        <div class="edit-username__input">
+          <%= f.text_field :username, autofocus: true %>
+          <p class="edit-description">In most cases, you'll be able to change your username back to tolipovrustamxon01 for another 14 days. Learn More</p>
+        </div>
+      </div>
+      <div class="edit-bio form-grid">
+        <%= f.label :bio %>
+        <div class="edit-bio__input">
+          <%= f.text_area :bio, autofocus: true %>
+          <p class="edit-description">Tell the world a little bit about yourself.</p>
+        </div>
+      </div>
+
+      <div class="edit-email form-grid">
+        <%= f.label :email %>
+        <div class="edit-email__input">
+          <%= f.text_field :email, autofocus: true %>
+          <p class="edit-description">Personal Information Provide your personal information, even if the account is used for a business, a pet or something else. This won't be a part of your public profile.</p>
+        </div>
+      </div>
+
+      <div class="submit form-grid">
+        <div class="empty"></div>
+        <div class="edit-email__input"><%= f.button "Submit", class: "submit-btn", redirec_to: user_session_path %></div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

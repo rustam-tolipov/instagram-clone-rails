@@ -1,0 +1,11 @@
+$('.preached-btn').on('ajax:success', function() {
+  $(this).parent().parent().find('.like_count')
+  .html('<%= @post.get_likes.size %> likes');
+  $(this).closest('.preached-btn').html('💔');
+})            
+
+$('.preach-btn').on('ajax:success', function() {
+  $(this).parent().parent().find('.like_count')
+  .html('<%= @post.get_likes.size %> likes');
+  $(this).closest('.preach-btn').html('♥️');
+})
