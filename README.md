@@ -171,7 +171,7 @@ See the [open issues](https://github.com/Rustamxon7/Instagram-Clone-Rails/issues
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. 
+Distributed under the [MIT](./LICENCE). 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
