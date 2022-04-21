@@ -1,4 +1,4 @@
-# Instagram-Clone-Rails
+# Instagram-Clone-Ruby-on-Rails
 
 <div id="top"></div>
 
@@ -19,6 +19,8 @@
   </a>
 
   <h3 align="center">Instagram Clone</h3>
+  <h4 align="center">(<a href="#danger">❗Danger message... explained❗</a>)</h4>
+
 
   <p align="center">
     An awesome Instagram clone built with Ruby on Rails.
@@ -26,7 +28,7 @@
     <a href="https://instagram-test-ror.herokuapp.com/"><strong>Explore the website »</strong></a>
     <br />
     <br />
-    <a href="https://instagram-test-ror.herokuapp.com/">View Demo</a>
+    <a href="https://instagram-test-ror.herokuapp.com/">LIVE DEMO</a>
     ·
     <a href="https://github.com/Rustamxon7/Instagram-Clone-Rails/issues">Report Bug</a>
     ·
@@ -62,18 +64,22 @@
   </ol>
 </details>
 
+### Live Demo :    <a href="https://instagram-test-ror.herokuapp.com/">LIVE DEMO</a>
+
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://instagram-test-ror.herokuapp.com/)
+![desk](https://user-images.githubusercontent.com/69011963/164515906-7024c276-d7a9-46d9-8619-06e298588bfe.gif)
 
 The Instagram Clone is a clone of Instagram built with Ruby on Rails.
 It is one of my most proud projects. I am proud to say that I have built this project from scratch. Building such a project with Ruby on Rails is a great experience.
 
 Here's why:
 * Front designe is build with HTML and CSS technologies.
+* User friendly
+* Available on Desktop, Tablet, and Phones
 * Cloudinary is used to upload images to the server.
 * Backend is built with Ruby on Rails.
 
@@ -120,7 +126,12 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    bundle install
    ```
-4. Run the server
+4. Setup database with:
+   ```
+   rails db:create
+   rails db:migrate
+   ```
+5. Run the server
    ```sh
    ```rails s
    ```
@@ -134,7 +145,13 @@ This is an example of how to list things you need to use the software and how to
 
 First, if you are using Google Chrome, it may display a warning about insecure content. This is normal. This is because the project is hosted on Heroku, and using thir party libraries. Simply skip the message by followith this video. 
 
-# WARNING VIDEO HERE
+<p align="left" id="danger">
+<img src="https://user-images.githubusercontent.com/69011963/164516377-3c570bf7-6091-4d90-9031-98082d0e83cb.gif" alt="Logo" width="29%" height="auto" object-fit="cover">
+
+<img src="https://user-images.githubusercontent.com/69011963/164518637-7e58cc46-6ca8-4dc1-9d5f-450904a30e4b.gif" alt="Logo" width="70%" height="auto" object-fit="cover">
+  </p>
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -160,7 +177,7 @@ See the [open issues](https://github.com/Rustamxon7/Instagram-Clone-Rails/issues
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. 
+Distributed under the [MIT](./LICENCE). 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
