@@ -1,4 +1,4 @@
-# Instagram-Clone-Rails
+# Instagram-Clone-Ruby-on-Rails
 
 <div id="top"></div>
 
