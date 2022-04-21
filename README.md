@@ -19,7 +19,7 @@
   </a>
 
   <h3 align="center">Instagram Clone</h3>
-  <h4 align="center">(<a href="#top">❗Danger message... explained❗</a>)</h4>
+  <h4 align="center">(<a href="#danger">❗Danger message... explained❗</a>)</h4>
 
 
   <p align="center">
