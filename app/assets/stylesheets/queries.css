@@ -387,6 +387,7 @@
     background: unset;
     border: none;
     margin-bottom: -2.4rem;
+    overflow-x: scroll;
   }
 
   @media (max-width: 34em) {

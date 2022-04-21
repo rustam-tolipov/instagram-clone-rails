@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show]
 
   def index
-    @users = User.includes(:posts).all
+    @users = User.includes(:posts).all.order(created_at: :desc)
     @user = current_user
     @posts = Post.all.order('created_at DESC')
   end
