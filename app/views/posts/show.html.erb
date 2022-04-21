@@ -22,8 +22,11 @@
         <div class="popup-user">
           <div class="popup-profile-pic"><%= image_tag avatar_url(@post.user), class: "avatar" %></div>
           <div class="popup-username"><%= link_to @post.user.name, user_path(@post.user), class: "username" %></div>
+
+      <% if current_user == @post.user %>
                   <%= button_to post_path(@post), method: :delete, class: "delete--post", data: {confirm: "Are you sure you want to delete this post?"} do %>
                   <ion-icon name="trash-outline"></ion-icon> DELETE
+                  <% end %>
                   <% end %>
 
           <%= link_to root_path, class: "popup-options" do %>

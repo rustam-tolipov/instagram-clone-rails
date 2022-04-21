@@ -78,3 +78,5 @@ gem 'acts_as_votable'
 
 # jquery-rails
 gem 'jquery-rails'
+
+gem 'cancan'
