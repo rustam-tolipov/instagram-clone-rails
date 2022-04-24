@@ -1,0 +1,152 @@
+<section class="main">
+  <div class="container">
+    <div class="main-bar">
+      <div>
+        <ul class="stories-list">
+          <% @users.each do |user| %>
+          <li class="stories-link">
+            <%= link_to user_path(user) do %>
+            <%= image_tag avatar_url(user), class: "story-profile-img" %>
+            <% end %>
+            <p class="story-profile-name"><%= user.name %></p>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <!-- MAIN SECTION -->
+      <% @posts.each do |post| %>
+      <div class="post">
+        <div class="post-top-bar">
+          <div class="post__profile--info">
+            <%= link_to user_path(post.user) do %> <%= image_tag avatar_url(post.user), class: "post__profile--img" %> <% end %>
+            <div class="post__profile--name">
+              <p class="profile--name"><%= link_to post.user.name, user_path(post.user), class: "username" %></p>
+            </div>
+          </div>
+          <div class="post__profile--options">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          </div>
+        </div>
+
+        <%= link_to post_path(post), class: "post__img" do %> <%= image_tag post.image_url, class: "post--img" %> <% end %>
+
+        <div class="post__bottom--bar">
+          <div class="post__icons">
+            <!-- like -->
+            <% if current_user.liked? post %> <%= link_to like_post_path(post, 'unlike'), class: 'preached-btn', method: :put, remote: :true do %> ❤️ <% end %> <% else %> <%= link_to like_post_path(post, 'like'), class: 'preach-btn', method: :put, remote: :true do %> <ion-icon name="heart-outline"></ion-icon> <% end %> <% end %>
+
+            <!-- comment -->
+            <%= link_to post_path(post) do %>
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            <% end %>
+            <!-- telegraf -->
+            <ion-icon name="paper-plane-outline"></ion-icon>
+          </div>
+
+          <div class="dots">...</div>
+
+          <div class="post__icon--save">
+            <ion-icon name="bookmark-outline"> </ion-icon>
+          </div>
+        </div>
+
+        <div class="post--info">
+          <span class="like_count" <%="post.id" %>><%= post.get_likes.size %> likes</span>
+
+          <div class="post__full--info"><%= post.user.name %> <span class="more"><%= post.content %></span></div>
+          <%= link_to post_path(post), class: "post__view--comments" do %> View all <%= post.comments.size %> comments <% end %>
+          <div class="post__posted--time"><%= time_ago_in_words(post.created_at) %> AGO</div>
+        </div>
+
+        <%= form_with(model: Comment.new, url: post_comments_path(post), class: 'post__comments') do |f| %>
+        <ion-icon class="comment__icon" name="happy-outline"></ion-icon>
+        <%= f.text_field :content, class: "post__comment--input", placeholder: "Add a comment..." %> <%= f.submit "Post", class: "comment__submit" %> <% end %>
+      </div>
+      <% end %>
+    </div>
+
+    <!-- LEFT SIDEBAR -->
+    <div class="side-bar">
+      <div class="user__profile">
+        <%= link_to user_path(current_user) do %>
+        <%= image_tag avatar_url(@user), class: "user__img" %>
+        <% end %>
+        <div class="user__info">
+          <p class="user__name"><%= link_to @user.name, user_path(@user) %></p>
+          <p class="user__fullname"><%= @user.username %></p>
+        </div>
+        <a href="#" class="switch">Switch</a>
+      </div>
+
+      <div class="suggestions">
+        <div class="suggestion__title">
+          <p>Suggestions For You</p>
+          <a class="see__all" href="#">See All</a>
+        </div>
+
+        <!--   suggest users that are not current and not following  -->
+        <% @users.each do |user| %> <% unless user == current_user %> <% unless current_user.following? user %>
+        <div class="sugessted__profile">
+          <%= image_tag avatar_url(user), class: "sugessted__profile--img" %>
+          <div class="user__info">
+            <p class="user__name"><%= link_to user.name, user_path(user), class: "username" %></p>
+            <p class="suggested__user__fullname"><%= user.username %></p>
+          </div>
+          <%= link_to "Follow", follow_user_path(user), method: :post, remote: :true, class: "switch" %>
+        </div>
+        <% end %> <% end %> <% end %>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <ul class="footer__list">
+          <li class="footer__link">
+            <a href="#">About</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Help</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Press</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">API</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Jobs</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Privacy</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Terms</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Language</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Top Accounts</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Hashtags</a>
+          </li>
+          <span>.</span>
+          <li class="footer__link">
+            <a href="#">Language</a>
+          </li>
+        </ul>
+        <div class="copyright">© 2022 INSTAGRAM FROM META</div>
+      </div>
+    </div>
+  </div>
+</section>

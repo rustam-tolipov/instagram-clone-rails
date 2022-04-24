@@ -1,0 +1,151 @@
+// LOGIN START
+.login-container {
+  width: 100rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  font-size: 1.4rem;
+}
+
+.box {
+  max-width: 35rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffff;
+  border: 0.1rem solid #e6e6e6;
+  border-radius: 0.1rem;
+  margin: 0 0 1rem;
+  padding: 1rem 0;
+  flex-grow: 1;
+}
+
+.heading {
+  margin: 2.2rem auto 1.2rem;
+  background-image: url('https://www.instagram.com/static/bundles/es6/sprite_core_b20f2a3cd7e4.png/b20f2a3cd7e4.png');
+  background-position: -9.8rem 0;
+  height: 5.1rem;
+  width: 17.7rem;
+  overflow: hidden;
+}
+
+.field {
+  margin: 2rem 0;
+  position: relative;
+  font-size: 1.4rem;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.box-input {
+  padding: 1rem 0.1rem 1rem 1rem;
+  font-size: 1.2rem;
+  width: 26rem;
+  outline: none;
+  background: #fafafa;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #efefef;
+}
+
+/* label intial position */
+
+.box-label {
+  position: absolute;
+  pointer-events: none;
+  left: 1rem;
+  padding-bottom: 1.5rem;
+  transform: translateY(1rem);
+  line-height: 0.6rem;
+  transition: all ease-out 0.1s;
+  font-size: 1.4rem;
+  color: #999;
+  padding-top: 0.6rem;
+}
+
+/* hiding placeholder in all browsers */
+
+.box input::placeholder {
+  visibility: hidden;
+}
+
+/* hiding  placeholder in mozilla */
+.login-form ::-moz-placeholder {
+  color: transparent;
+}
+
+/* label final position */
+.box input:not(:placeholder-shown) + label {
+  transform: translateY(0);
+  font-size: 1.1rem;
+}
+
+/* input padding increases if placeholder is not shown */
+.box input:not(:placeholder-shown) {
+  padding-top: 1.4rem;
+  padding-bottom: 0.2rem;
+}
+
+.login-button {
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.1rem solid transparent;
+  background-color: #3897f0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #999;
+  margin-top: 0.6rem;
+}
+
+.separator .line {
+  height: 0.1rem;
+  width: 40%;
+  background-color: #dbdbdb;
+}
+
+.other {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fb-login-btn {
+  margin: 1rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #385185;
+  font-weight: 600;
+  background: transparent;
+}
+
+.fb-icon {
+  color: #385185;
+  font-size: 1rem;
+  padding-right: 0.1rem;
+}
+
+.forgot-password {
+  font-size: 1.1rem;
+  color: #003569;
+}
+
+.signup {
+  color: #3897f0;
+  font-weight: 600;
+}
+// LOGIN END

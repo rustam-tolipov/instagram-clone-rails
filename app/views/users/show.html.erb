@@ -1,0 +1,113 @@
+<div class="section--profile container">
+  <div class="profile--header">
+    <%= image_tag avatar_url(@user), class: "profile--header__img" %>
+    <div class="profile--info">
+      <!-- username, edit-profile, settings-btn -->
+      <div class="profile__name">
+        <p class="profile__name--text"><%= @user.username %></p>
+        <% if @user.id == current_user.id %> <%= link_to 'Edit Profile', edit_user_registration_path, class: 'profile--edit' %> <% elsif current_user.followees.include?(@user) %>
+        <h5><%= button_to "Unfollow", unfollow_user_path, method: "POST",class: 'profile--edit' %></h5>
+        <% else %>
+        <h5><%= button_to "Follow", follow_user_path, method: "POST",class: 'profile--edit' %></h5>
+        <% end%>
+        <ion-icon class="profilo--settings" name="settings-outline"></ion-icon>
+      </div>
+
+      <!-- posts, followers, following -->
+      <div class="profile__stats">
+        <div class="stats--item">
+          <p class="stats--item__number"><%= @user.posts.count %></p>
+          <p class="stats--item__text">posts</p>
+        </div>
+        <div class="stats--item">
+          <% if @user.followers_counter == 1 %>
+          <p class="stats--item__number"><%= @user.followers.count %></p>
+          <p class="stats--item__text">follower</p>
+          <% else %>
+          <p class="stats--item__number"><%= @user.followers.count %></p>
+          <p class="stats--item__text">followers</p>
+          <% end %>
+        </div>
+        <div class="stats--item">
+          <% if @user.followees %>
+          <p class="stats--item__number"><%= @user.followees.count %></p>
+          <p class="stats--item__text">following</p>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- fullname, bio -->
+      <div class="profile--fullname">
+        <p class="profile--fullname__text"><%= @user.name %></p>
+        <p class="profile--fullname__bio"><%= @user.bio %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile--mobile--info">
+    <p class="profile--fullname__text"><%= @user.name %></p>
+    <p class="profile--fullname__bio"><%= @user.bio %></p>
+  </div>
+
+  <div class="profile--highlights">
+    <!-- highlight--img, highlight--name -->
+    <div class="highlights">
+      <%= image_tag avatar_url(@user), class: "highlight--img" %>
+      <p class="highlight--name"><%= @user.username %></p>
+    </div>
+  </div>
+
+  <div class="profile--mobile__stats">
+    <div class="stats--item">
+      <p class="stats--item__number"><%= @user.posts.count %></p>
+      <p class="stats--item__text">posts</p>
+    </div>
+    <div class="stats--item">
+      <p class="stats--item__number"><%= @user.followers.count %></p>
+      <p class="stats--item__text">followers</p>
+    </div>
+    <div class="stats--item">
+      <p class="stats--item__number"><%= @user.followees.count %></p>
+      <p class="stats--item__text">following</p>
+    </div>
+  </div>
+
+  <div class="profile--posts__header">
+    <ul class="posts--navbar">
+      <!-- Posts, Videos, Saved, Tagged -->
+      <li class="navbar--item">
+        <ion-icon class="navbar--icon" name="images-outline"></ion-icon>
+        <p class="navbar--text">Posts</p>
+      </li>
+      <li class="navbar--item">
+        <ion-icon class="navbar--icon" name="images-outline"></ion-icon>
+        <p class="navbar--text">Video</p>
+      </li>
+      <li class="navbar--item">
+        <ion-icon class="navbar--icon" name="images-outline"></ion-icon>
+        <p class="navbar--text">Saved</p>
+      </li>
+      <li class="navbar--item">
+        <ion-icon class="navbar--icon" name="images-outline"></ion-icon>
+        <p class="navbar--text">Tagged</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="profile--posts">
+    <% @posts.each do |post| %> <%= link_to post_path(post) do %>
+    <!-- standar_image -->
+    <% if post != nil %> <%= image_tag post.image_url, class: "profile--posts__img" %> <% else %>
+    <!-- put delete post button -->
+
+    <span class="profile--posts__img">
+      <ion-icon name="alert-circle-outline" class="profile--posts__icon"></ion-icon>
+      <p class="profile--error__title">TOO LARGE >> 2MB!</p>
+      <p class="profile--error">Please upload a smaller file</p>
+      <%= button_to "Go to post link and DELETE", post_path(post), method: "DELETE", class: "profile--broken__link" %>
+    </span>
+    <% end %> <% end %> <% end %>
+  </div>
+</div>
+
+<!-- explain the problem an your_project -->

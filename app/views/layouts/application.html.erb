@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instagram</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <%= csrf_meta_tags %> <%= csp_meta_tag %> <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <%= render 'layouts/navbar' if current_user %> 
+    <% if notice %>
+    <p class="notice">
+      <ion-icon class="alert--icon" name="checkmark-done-outline"></ion-icon>
+      <%= notice %>
+    </p>
+    <% end %>
+    <% if alert %>
+    <p class="alert">
+      <ion-icon class="alert--icon" name="alert-circle-outline"></ion-icon>
+      <%= alert %>
+    </p>
+    <% end %> <%= yield %>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://instagram.com/about/legal/privacy/">Privacy</a>
+        <a href="https://instagram.com/about/legal/terms/">Terms</a>
+        <a href="https://instagram.com/about/legal/cookies/">Cookies</a>
+        <a href="https://instagram.com/about/legal/community_guidelines/">Guidelines</a>
+        <a href="https://instagram.com/about/legal/dmca/">DMCA</a>
+        <a href="https://instagram.com/about/legal/">Legal</a>
+        <a href="https://instagram.com/about/">About</a>
+        <a href="https://instagram.com/about/jobs/">Jobs</a>
+        <a href="https://instagram.com/about/help/">Help</a>
+        <a href="https://instagram.com/about/api/">API</a>
+        <a href="https://instagram.com/about/top_accounts/">Top Accounts</a>
+        <a href="https://instagram.com/about/hashtags/">Hashtags</a>
+        <a href="https://instagram.com/about/locations/">Locations</a>
+        <a href="https://instagram.com/about/instagram_lite/">Instagram Lite</a>
+      </div>
+      <p>© 2021 Instagram from Rustamjon@Maqsud</p>
+    </footer>
+
+    <!-- ION iCONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="popup" id="popup">
+    <%= link_to :back if current_user do %>
+    <ion-icon name="close-outline" class="close--post"></ion-icon>
+    <% end %>
+
+    <div class="popup-box">
+      <div class="popup-img">
+        <% if @post.present? %> <%= image_tag @post.image_url, class: "popup-img-preview" %>
+
+        <% else %>
+        <span class="profile--posts__img">
+          <ion-icon name="alert-circle-outline" class="profile--posts__icon"></ion-icon>
+          <p class="profile--error__title">TOO LARGE >> 2MB!</p>
+          <p class="profile--error">Please upload a smaller file</p>
+          <%= button_to "DELETE", post_path(@post), method: :delete, class: "profile--broken__link" %>
+        </span>
+        <% end %>
+      </div>
+
+      <div class="popup-content">
+        <div class="popup-user">
+          <div class="popup-profile-pic"><%= image_tag avatar_url(@post.user), class: "avatar" %></div>
+          <div class="popup-username"><%= link_to @post.user.name, user_path(@post.user), class: "username" %></div>
+
+      <% if current_user == @post.user %>
+                  <%= button_to post_path(@post), method: :delete, class: "delete--post", data: {confirm: "Are you sure you want to delete this post?"} do %>
+                  <ion-icon class="delete--post-ion-icon" name="trash-outline"></ion-icon> DELETE
+                  <% end %>
+                  <% end %>
+
+          <%= link_to root_path, class: "popup-options" do %>
+          <ion-icon name="chevron-back-outline" class="popup-options"></ion-icon>
+          <% end %>
+        </div>
+
+        <% @post.comments.each do |comment| %>
+        <div class="popup-comment">
+          <%= image_tag avatar_url(comment.user), class: "avatar" %>
+          <div class="popup-comment-content">
+            <p class="popup-comment-user"><%= comment.user.name %></p>
+            <p class="popup-comment-text"><%= comment.content %></p>
+          </div>
+        </div>
+        <% end %> <%= form_with(model: Comment.new, url: post_comments_path(@post), class: 'post__comments popup__comments') do |f| %>
+        <ion-icon class="comment__icon" name="happy-outline"></ion-icon>
+        <%= f.text_field :content, class: "post__comment--input", placeholder: "Add a comment..." %> <%= f.submit "Post", class: "comment__submit" %> <% end %>
+      </div>
+    </div>
+  </div>
+</div>

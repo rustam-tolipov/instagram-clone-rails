@@ -1,0 +1,159 @@
+/* Instagram edit container */
+
+.edit-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #dad8d8;
+  background-color: #fafafa;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: filter 0.2s;
+  font-size: 1.5rem;
+}
+
+.edit {
+  background-color: #fff;
+  border-radius: 0.6rem;
+  border: 1px solid #dad8d8;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dad8d8;
+}
+
+.option {
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.2s;
+  padding: 2rem;
+  border-left: rgba(255, 255, 255, 0) solid 2px;
+}
+
+.option:hover {
+  filter: brightness(0.8);
+  border-left: 2px solid #dad8d8;
+  background: #ffffff1c;
+}
+
+.edit-field {
+  padding: 2.4rem 0.1rem 4.8rem;
+}
+
+.form input,
+.form textarea {
+  padding: 0.4rem;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
+  margin-bottom: 1.6rem;
+  // width: 100%;
+}
+
+.form-container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 10rem 30rem;
+  grid-template-rows: 1fr;
+  gap: 2.8rem;
+  padding-top: 2.8rem;
+}
+
+.form-grid label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  justify-self: end;
+}
+
+.edit-profile_image {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.edit-avatar {
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5.2rem;
+  border: #747474 1px solid;
+  margin-left: 7rem;
+  object-fit: cover;
+}
+
+.edit-profile__bottom {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  gap: 0.5rem;
+}
+
+.edit-profile__bottom h3 {
+  font-weight: 400;
+}
+
+.edit-profile__bottom p {
+  color: rgb(110, 110, 226);
+  font-weight: 500;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.edit-description {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  gap: 0.5rem;
+  line-height: 1.5rem;
+  color: #747474;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background-color: #61a7f7;
+  color: #fff;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: filter 0.2s;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* instagram change password input */
+.edit-password__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.2rem !important;
+  border: 1px solid #dad8d8;
+  background-color: #fafafa;
+  border-radius: 0.5rem !important;
+  cursor: pointer;
+  transition: filter 0.2s;
+  font-size: 1.5rem;
+}
+
+.forgot-password {
+  margin-top: 2rem;
+}
+
+.file_field {
+  display: none;
+}

@@ -1,0 +1,129 @@
+.popup {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+
+.close--post {
+  position: fixed;
+  top: 1.4%;
+  right: 1%;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.popup-box {
+  position: absolute;
+  max-width: 150rem;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  display: grid;
+  grid-template-columns: 1fr 40rem;
+}
+
+.popup-img {
+  width: 70rem;
+  height: 70rem;
+}
+
+.popup-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.popup-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.popup-profile-pic {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.popup-profile-pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.popup-username a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.popup-options {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.popup-comment {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.popup__comments {
+  margin-top: auto;
+  padding: 1.2rem !important;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.popup-comment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popup-comment-user {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.popup-comment-text {
+  font-size: 1.2rem;
+}
+
+.popup-comment-create {
+  margin-top: auto;
+}
+
+.smile-icon {
+  margin-right: 1rem;
+}
+
+.popup-close {
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+}

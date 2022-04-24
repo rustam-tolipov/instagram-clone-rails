@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  color: #262626;
+  background-color: #fafafa;
+}
+
+a {
+  color: #262626;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 97.5rem;
+  margin: 0 auto;
+  padding: 3rem 2rem 6.4rem 2em;
+}
+
+.notice,
+.alert {
+  position: absolute;
+  display: flex;
+  right: 0;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  margin-bottom: 2.4rem;
+  padding: 1.4rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  transition: all 0.3s ease-out;
+  animation: notice-in 0.3s ease-out;
+}
+
+.notice {
+  color: #165624;
+  border-left: 1px solid #d2b5b8;
+  background-image: linear-gradient(45deg, #f8d7da 0%, #f8d7da 99%, #fad0c4 100%);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+.alert {
+  color: #866302;
+  border-left: 1px solid #d2b5b8;
+  background-image: linear-gradient(45deg, #fdf3cd 0%, #dbd0a9 99%, #fad0c4 100%);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+.alert--icon {
+  font-size: 2.2rem;
+  margin-right: 1.4rem;
+}
+
+/* left to right animate .notice */
+
+@keyframes notice-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
