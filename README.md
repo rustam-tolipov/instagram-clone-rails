@@ -71,7 +71,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![desk](https://user-images.githubusercontent.com/69011963/164515906-7024c276-d7a9-46d9-8619-06e298588bfe.gif)
+<img width="1232" alt="instagram_clone" src="https://user-images.githubusercontent.com/69011963/197790867-9ac6a73e-844a-437b-968f-13e44593f913.png">
 
 The Instagram Clone is a clone of Instagram built with Ruby on Rails.
 It is one of my most proud projects. I am proud to say that I have built this project from scratch. Building such a project with Ruby on Rails is a great experience.
